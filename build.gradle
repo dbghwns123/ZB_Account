@@ -20,8 +20,10 @@ configurations {
 }
 
 repositories {
-    mavenCentral()
+    mavenCentral()  // 기본 리포지토리
+//    maven { url 'https://jitpack.io' } // JitPack 리포지토리 추가
 }
+
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
