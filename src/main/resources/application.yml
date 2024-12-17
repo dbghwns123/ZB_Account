@@ -1,4 +1,8 @@
 spring:
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
   application:
     name: Account
   datasource:
@@ -19,7 +23,3 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
-  data:
-    redis:
-      port: 6379
-      host: 127.0.0.1

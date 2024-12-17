@@ -12,21 +12,21 @@ import java.util.concurrent.TimeUnit;
 @Service
 @RequiredArgsConstructor
 public class RedisTestService {
-//    private final RedissonClient redissonClient;
-//
-//    public String getLock() {
-//        RLock lock = redissonClient.getLock("sampleLock");
-//
-//        try {
-//            boolean isLock = lock.tryLock(1, 3, TimeUnit.SECONDS);
-//            if (!isLock) {
-//                log.error("======Lock acquisition failed======");
-//                return "Lock failed";
-//            }
-//        } catch (Exception e) {
-//            log.error("Redis lock failed");
-//        }
-//        return "Lock success";
-//    }
+    private final RedissonClient redissonClient;
+
+    public String getLock() {
+        RLock lock = redissonClient.getLock("sampleLock");
+
+        try {
+            boolean isLock = lock.tryLock(1, 3, TimeUnit.SECONDS);
+            if (!isLock) {
+                log.error("======Lock acquisition failed======");
+                return "Lock failed";
+            }
+        } catch (Exception e) {
+            log.error("Redis lock failed");
+        }
+        return "Lock success";
+    }
 
 }
